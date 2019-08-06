@@ -1,0 +1,125 @@
+@import '../sass/variables.scss';
+
+
+html,body{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: #000;
+    position: relative;
+    font-family: $mainFont;
+}
+//fullpage elements styling
+
+
+
+
+
+// navigation
+
+nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-height: 50px;
+    a{
+        text-decoration: none;
+    }
+    #logo{
+        height: 100%;
+        width: 250px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: nowrap;  
+        margin-left: 20px !important;
+        margin-top: 35px !important;
+        img{
+            max-height: 100px;
+            margin-top: 75px !important;
+        }
+        span{
+            margin-top: 25px !important;
+            margin-left: -45px;
+            color: #fff;
+            font-size: 3.5em;      
+            text-decoration: none;
+            font-family: $logoFont;
+        }
+    }
+    .hamburger{
+        position: absolute;
+        top: 25px;
+        right: 35px;
+        height: 60px;
+        width: 60px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+        z-index: 1;
+        cursor: pointer;
+        hr{
+            height: 2px;
+            width: 60px;
+            background: rgb(243, 22, 151);
+            border:none;
+        }
+    }
+    .hamburger:hover{
+        hr{
+            animation: stretchLine .35s ease-in-out;
+        }
+        #hb-mid{
+            animation-delay: .2s;
+        }
+        #hb-bot{
+            animation-delay: .4s;
+        }
+    }
+    @keyframes stretchLine{
+        0%,100%{
+            transform: none;
+        }
+        50%{
+            transform: scaleX(1.5);
+        }
+    }
+    
+    #fs-nav{
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 100vw;
+        overflow: hidden;
+        z-index: 999;
+        background: #000;
+        ul{
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            li{
+                display: inline-block;
+                width: 100%;
+                height: 25vh;
+                a{
+                    color: #fff;
+                    width: 100vw !important;
+                    text-decoration: none;
+                    height: 25vh;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+
+
+
